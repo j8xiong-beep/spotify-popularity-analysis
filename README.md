@@ -1,4 +1,4 @@
-# 🎧 Spotify Song Popularity Analysis
+# Spotify Song Popularity Analysis
 
 <div align="center">
 
