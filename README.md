@@ -1,7 +1,5 @@
 # Spotify Song Popularity Analysis
 
-DSC 80 Final Project
-
 ## Introduction
 
 This project explores factors that influence song popularity on Spotify.
