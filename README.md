@@ -1,8 +1,13 @@
-# 🎵 Spotify Song Popularity Analysis
+# 🎧 Spotify Song Popularity Analysis
 
-DSC 80 Final Project
+<div align="center">
 
-Author: Jingyun Xiong
+## 🎵 What Makes a Song Popular?
+
+**DSC 80 Final Project**  
+**Jingyun Xiong**
+
+🎶 🎼 🎧 🎤 🎹 🎸 🎷 🎺
 
 ## Dataset
 
