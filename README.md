@@ -1,45 +1,19 @@
 # 🎵 Spotify Song Popularity Analysis
 
-### 🎧 DSC 80 Final Project
+DSC 80 Final Project
 
----
+Author: Jingyun Xiong
 
-## 🎶 Introduction
+## Project Website
 
-This project explores factors that influence song popularity on Spotify.
+Visit the project website:
 
----
+https://j8xiong-beep.github.io/spotify-popularity-analysis/
 
-## 🎼 Step 1: Introduction
+## Dataset
 
-Analyze Spotify song characteristics such as danceability, energy, tempo, and explicit content to understand how they relate to popularity.
+Spotify Songs Dataset
 
----
+## Project Goal
 
-## 🎹 Step 2: Data Cleaning
-
-Cleaned missing values and investigated missingness mechanisms.
-
----
-
-## 🎤 Step 3: Assessment of Missingness
-
-Examined whether tempo missingness depends on popularity and explicit content.
-
----
-
-## 🎸 Step 4: Hypothesis Testing
-
-Tested relationships between danceability, energy, and popularity using permutation tests.
-
----
-
-## 🎷 Step 5: Prediction Problem
-
-Our goal is to predict song popularity using song attributes.
-
----
-
-## 🎺 Step 6: Baseline Model
-
-Built a baseline linear regression model using Spotify audio features.
+Analyze factors that influence Spotify song popularity and build a predictive model.
