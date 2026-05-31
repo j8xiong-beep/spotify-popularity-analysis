@@ -1,11 +1,3 @@
-<h1 align="center">🎵 Spotify Song Popularity Analysis</h1>
-
-<h3 align="center">DSC 80 Final Project</h3>
-
-<p align="center">
-Jingyun Xiong
-</p>
-
 <p align="center">
 🎧 🎶 🎼 🎤 🎹
 </p>
