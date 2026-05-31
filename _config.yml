@@ -3,5 +3,5 @@ remote_theme: pages-themes/midnight@v0.2.0
 plugins:
   - jekyll-remote-theme
 
-title: Spotify Song Popularity Analysis
-description: DSC 80 Final Project | Jingyun Xiong
+title: What Makes a Song Popular? A Data Science Analysis of Spotify Tracks
+description: j8xiong@ucsd.edu | Jingyun Xiong
