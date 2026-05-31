@@ -1,13 +1,14 @@
-# Spotify Song Popularity Analysis
+<h1 align="center">🎵 Spotify Song Popularity Analysis</h1>
 
-<div align="center">
+<h3 align="center">DSC 80 Final Project</h3>
 
-## 🎵 What Makes a Song Popular?
+<p align="center">
+Jingyun Xiong
+</p>
 
-**DSC 80 Final Project**  
-**Jingyun Xiong**
-
-🎶 🎼 🎧 🎤 🎹 🎸 🎷 🎺
+<p align="center">
+🎧 🎶 🎼 🎤 🎹
+</p>
 
 ## Dataset
 
