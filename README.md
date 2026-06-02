@@ -83,12 +83,6 @@ This scatter plot shows the relationship between danceability and popularity for
 
 I also examined energy because it is another audio feature that may be connected to how popular a song becomes.
 
-<iframe
-    src="assets/energy_vs_popularity.html"
-    width="750"
-    height="550"
-    frameborder="0">
-</iframe>
 
 This scatter plot shows the relationship between energy and popularity for the sampled Spotify songs. The points are widely spread across different energy levels, suggesting that there is no strong visual relationship between energy and popularity. Popular songs appear at both moderate and high energy levels, while many high-energy songs still have low or moderate popularity. This suggests that energy alone is unlikely to explain song popularity.
 
