@@ -107,7 +107,7 @@ The bar chart shows that the average popularity scores are relatively similar ac
 
 Overall, the differences between groups are fairly small, indicating that danceability alone is not a strong predictor of popularity. While moderate levels of danceability may be associated with slightly higher popularity, other audio features and external factors likely play a larger role in determining whether a song becomes successful on Spotify.
 
-## Step 3: Assessment of Missingness
+## Assessment of Missingness
 
 <h3>NMAR Analysis</h3>
 
@@ -149,9 +149,44 @@ Overall, the results indicate that the missingness of <code>tempo</code> is not 
 </p>
 
 
-## Step 4: Hypothesis Testing
+## Hypothesis Testing
 
-...
+<h3>Hypothesis Test 1: Danceability and Popularity</h3>
+
+<p>
+Research Question: Do songs with higher danceability tend to have higher popularity scores on Spotify?
+</p>
+
+<p>
+<strong>Null Hypothesis:</strong> Songs with high danceability and songs with low danceability have the same average popularity.
+</p>
+
+<p>
+<strong>Alternative Hypothesis:</strong> Songs with high danceability have higher average popularity than songs with low danceability.
+</p>
+
+<p>
+<strong>Significance Level:</strong> α = 0.05
+</p>
+
+<iframe
+src="assets/danceability_hypothesis_test.html"
+width="750"
+height="550"
+frameborder="0">
+</iframe>
+
+<p>
+The observed difference in mean popularity between songs with high danceability and songs with low danceability was approximately <strong>0.531</strong>. The permutation test produced a p-value smaller than <strong>0.001</strong>.
+</p>
+
+<p>
+Because the p-value is below the significance level of 0.05, I rejected the null hypothesis. This provides statistical evidence that songs with higher danceability tend to have slightly higher popularity scores on Spotify.
+</p>
+
+<p>
+However, the observed difference is relatively small, so danceability alone is not enough to strongly explain song popularity. This result suggests that danceability may be associated with popularity, but other audio features and external factors likely also play an important role.
+</p>
 
 ## Step 5: Prediction Problem
 
