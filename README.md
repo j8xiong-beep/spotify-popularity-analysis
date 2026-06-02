@@ -66,6 +66,32 @@ frameborder="0">
 
 This histogram shows that danceability scores are approximately centered around 0.6. Most songs fall between 0.4 and 0.8, while very low and very high danceability scores are relatively uncommon. The distribution is roughly unimodal and concentrated in the middle range, suggesting that songs in the Spotify dataset tend to be moderately danceable. Overall, danceability does not appear to be evenly distributed across all possible values, with most observations clustered around the center of the scale. This distribution provides useful context for the analyses conducted later in the project.
 
+## Bivariate Analysis: Danceability vs Popularity
+
+To investigate my research question, I created a scatter plot showing the relationship between danceability and popularity. Each point represents a song in the dataset.
+
+<iframe
+src="assets/danceability_vs_popularity.html"
+width="750"
+height="550"
+frameborder="0">
+</iframe>
+
+This scatter plot shows the relationship between danceability and popularity for a sample of songs in the Spotify dataset. While songs with higher danceability scores appear across a wide range of popularity levels, there is no strong visual pattern indicating a clear relationship. The points are widely dispersed, suggesting that danceability alone may not fully explain differences in popularity. Additional analyses are needed to determine whether a statistically meaningful relationship exists between these two variables.
+
+## Bivariate Analysis: Energy vs Popularity
+
+I also examined energy because it is another audio feature that may be connected to how popular a song becomes.
+
+<iframe
+    src="assets/energy_vs_popularity.html"
+    width="750"
+    height="550"
+    frameborder="0">
+</iframe>
+
+This scatter plot shows the relationship between energy and popularity for the sampled Spotify songs. The points are widely spread across different energy levels, suggesting that there is no strong visual relationship between energy and popularity. Popular songs appear at both moderate and high energy levels, while many high-energy songs still have low or moderate popularity. This suggests that energy alone is unlikely to explain song popularity.
+
 ## Step 3: Assessment of Missingness
 
 ...
