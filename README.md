@@ -42,12 +42,12 @@ These results suggest that the average popularity score is relatively low, while
 
 I inspected the dataset structure and checked for missing values before beginning the analysis. Most variables used in this project, including popularity and danceability, contain complete observations. However, the tempo column contains a noticeable number of missing values (22,114 missing entries). Since tempo is not the primary variable used to answer my research question, I focused on variables with complete information such as popularity and danceability. No additional cleaning was required for these key variables, making the dataset suitable for further exploratory analysis and hypothesis testing.
 
-Univariate Analysis: Popularity Distribution
+## Univariate Analysis: Popularity Distribution
 To better understand the dataset, I first examined the distribution of Spotify popularity scores. The histogram below shows the distribution of song popularity across all tracks in the dataset.
 
 <iframe
 src="assets/popularity_distribution.html"
-width="900"
+width="750"
 height="550"
 frameborder="0">
 </iframe>
