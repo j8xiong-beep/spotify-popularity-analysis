@@ -188,6 +188,58 @@ Because the p-value is below the significance level of 0.05, I rejected the null
 However, the observed difference is relatively small, so danceability alone is not enough to strongly explain song popularity. This result suggests that danceability may be associated with popularity, but other audio features and external factors likely also play an important role.
 </p>
 
+<h3>Hypothesis Test 2: Energy and Popularity</h3>
+
+<p>
+Research Question: Do songs with higher energy tend to have higher popularity scores on Spotify?
+</p>
+
+<p>
+<strong>Null Hypothesis:</strong> Songs with high energy and songs with low energy have the same average popularity.
+</p>
+
+<p>
+<strong>Alternative Hypothesis:</strong> Songs with high energy have higher average popularity than songs with low energy.
+</p>
+
+<p>
+<strong>Significance Level:</strong> α = 0.05
+</p>
+
+<iframe
+src="assets/energy_hypothesis_test.html"
+width="750"
+height="550"
+frameborder="0">
+</iframe>
+
+<p>
+The observed difference in mean popularity between songs with high energy and low energy was approximately <strong>-1.04</strong>.
+</p>
+
+<p>
+The permutation test produced a p-value of <strong>1.0</strong>.
+</p>
+
+<p>
+Because the p-value is much larger than 0.05, I failed to reject the null hypothesis.
+</p>
+
+<p>
+The data do not provide evidence that songs with higher energy tend to have higher popularity scores on Spotify.
+</p>
+
+<p>
+Interestingly, songs with higher energy had slightly lower average popularity in this dataset. However, this difference was not statistically significant and may simply be due to random variation.
+</p>
+
+<h4>Interpretation</h4>
+
+<p>
+Unlike danceability, energy did not show a statistically significant relationship with popularity. This suggests that energy alone is not a strong predictor of song popularity on Spotify.
+</p>
+
+
 ## Step 5: Prediction Problem
 
 ...
