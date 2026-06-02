@@ -52,6 +52,9 @@ height="550"
 frameborder="0">
 </iframe>
 
+The histogram shows that most songs have relatively low to moderate popularity scores, while highly popular songs are less common. This suggests that extremely popular songs are relatively rare in the Spotify dataset.
+
+
 
 ## Step 3: Assessment of Missingness
 
