@@ -107,11 +107,47 @@ The bar chart shows that the average popularity scores are relatively similar ac
 
 Overall, the differences between groups are fairly small, indicating that danceability alone is not a strong predictor of popularity. While moderate levels of danceability may be associated with slightly higher popularity, other audio features and external factors likely play a larger role in determining whether a song becomes successful on Spotify.
 
-
-
 ## Step 3: Assessment of Missingness
 
-...
+<h3>NMAR Analysis</h3>
+
+<p>
+The <code>tempo</code> column contains a substantial number of missing values. Based only on the observed data, it is difficult to determine whether the missingness mechanism is NMAR (Not Missing At Random). One possible explanation is that tempo values may be unavailable for some songs because of limitations in Spotify's audio feature extraction process. Additional information about how Spotify generates audio features would be required to determine whether the missingness is truly NMAR.
+</p>
+
+<h3>Missingness Dependency Analysis</h3>
+
+<p>
+To investigate whether the missingness of the <code>tempo</code> column depends on other variables in the dataset, I performed permutation tests using both <code>popularity</code> and <code>explicit</code>.
+</p>
+
+<iframe
+src="assets/tempo_missingness_popularity.html"
+width="750"
+height="550"
+frameborder="0">
+</iframe>
+
+<p>
+The boxplot above shows the distribution of popularity for songs with missing and non-missing tempo values. The two distributions appear very similar, with nearly identical medians and spreads.
+</p>
+
+<p>
+A permutation test comparing popularity across the two groups produced a p-value of approximately <strong>0.734</strong>. Since this value is much larger than 0.05, I failed to reject the null hypothesis. This suggests that tempo missingness does not appear to depend on popularity.
+</p>
+
+<p>
+Next, I investigated whether tempo missingness depends on whether a song is marked as explicit. The observed difference in explicit rates between songs with missing and non-missing tempo values was tested using a permutation test.
+</p>
+
+<p>
+The permutation test produced a p-value approximately equal to <strong>0.000</strong>. Since this value is less than 0.05, I rejected the null hypothesis. This suggests that tempo missingness is associated with the <code>explicit</code> variable.
+</p>
+
+<p>
+Overall, the results indicate that the missingness of <code>tempo</code> is not completely random. Because the missingness appears to depend on an observed variable (<code>explicit</code>), the missingness mechanism is more consistent with MAR (Missing At Random) rather than MCAR (Missing Completely At Random).
+</p>
+
 
 ## Step 4: Hypothesis Testing
 
