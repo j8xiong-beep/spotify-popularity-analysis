@@ -45,8 +45,12 @@ I inspected the dataset structure and checked for missing values before beginnin
 Univariate Analysis: Popularity Distribution
 To better understand the dataset, I first examined the distribution of Spotify popularity scores. The histogram below shows the distribution of song popularity across all tracks in the dataset.
 
-
-
+<iframe
+src="assets/popularity_distribution.html"
+width="900"
+height="550"
+frameborder="0">
+</iframe>
 
 
 ## Step 3: Assessment of Missingness
