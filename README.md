@@ -83,8 +83,31 @@ This scatter plot shows the relationship between danceability and popularity for
 
 I also examined energy because it is another audio feature that may be connected to how popular a song becomes.
 
+<iframe
+src="assets/energy_vs_popularity.html"
+width="750"
+height="550"
+frameborder="0">
+</iframe>
 
 This scatter plot shows the relationship between energy and popularity for the sampled Spotify songs. The points are widely spread across different energy levels, suggesting that there is no strong visual relationship between energy and popularity. Popular songs appear at both moderate and high energy levels, while many high-energy songs still have low or moderate popularity. This suggests that energy alone is unlikely to explain song popularity.
+
+## Interesting Aggregate: Average Popularity by Danceability Group
+
+To better compare popularity across different levels of danceability, I divided songs into four danceability groups (Low, Medium-Low, Medium-High, and High) and calculated the average popularity score for each group.
+
+<iframe
+src="assets/average_popularity_by_danceability.html"
+width="750"
+height="550"
+frameborder="0">
+</iframe>
+
+The bar chart shows that the average popularity scores are relatively similar across the four danceability groups. Songs in the Medium-Low and Medium-High groups have slightly higher average popularity scores than songs in the Low and High groups. This suggests that popularity does not increase consistently with danceability.
+
+Overall, the differences between groups are fairly small, indicating that danceability alone is not a strong predictor of popularity. While moderate levels of danceability may be associated with slightly higher popularity, other audio features and external factors likely play a larger role in determining whether a song becomes successful on Spotify.
+
+
 
 ## Step 3: Assessment of Missingness
 
