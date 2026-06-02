@@ -2,14 +2,9 @@
 🎧 🎶 🎼 🎤 🎹
 </p>
 
-## Dataset
-
-Spotify Songs Dataset
-
 ## Project Goal
 
 Analyze factors that influence Spotify song popularity and build a predictive model.
-
 
 ## Introduction
 
@@ -30,9 +25,29 @@ Relevant variables used throughout this project include:
 * **valence:** A measure of musical positivity, where higher values generally correspond to happier and more cheerful songs.
 
 
-## Step 2: Data Cleaning
+## Data Cleaning and Exploratory Data Analysis
 
-...
+The Spotify dataset contains 114,000 songs and 22 variables.
+
+After examining the dataset structure using `info()`, I found that most variables were complete. However, several metadata columns such as artist name, album name, and track name contained a very small number of missing values.
+
+Summary statistics for two important variables are shown below.
+
+| Variable | Mean | Median | Min | Max |
+|----------|------|--------|------|------|
+| Popularity | 33.24 | 35 | 0 | 100 |
+| Danceability | 0.567 | 0.580 | 0.000 | 0.985 |
+
+These results suggest that the average popularity score is relatively low, while danceability is centered around 0.57.
+
+I inspected the dataset structure and checked for missing values before beginning the analysis. Most variables used in this project, including popularity and danceability, contain complete observations. However, the tempo column contains a noticeable number of missing values (22,114 missing entries). Since tempo is not the primary variable used to answer my research question, I focused on variables with complete information such as popularity and danceability. No additional cleaning was required for these key variables, making the dataset suitable for further exploratory analysis and hypothesis testing.
+
+Univariate Analysis: Popularity Distribution
+To better understand the dataset, I first examined the distribution of Spotify popularity scores. The histogram below shows the distribution of song popularity across all tracks in the dataset.
+
+
+
+
 
 ## Step 3: Assessment of Missingness
 
