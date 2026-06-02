@@ -52,9 +52,19 @@ height="550"
 frameborder="0">
 </iframe>
 
-The histogram shows that most songs have relatively low to moderate popularity scores, while highly popular songs are less common. This suggests that extremely popular songs are relatively rare in the Spotify dataset.
+The histogram shows that most songs have low to moderate popularity scores, with relatively few songs achieving extremely high popularity. This right-skewed distribution suggests that viral or highly successful songs are uncommon compared to the overall Spotify catalog.
 
+## Univariate Analysis: Danceability Distribution
+Next, I examined the distribution of danceability scores across all songs in the Spotify dataset. Since danceability is the primary explanatory variable in my research question, understanding its distribution provides important context for later analyses.
 
+<iframe
+src="assets/danceability_distribution.html"
+width="750"
+height="550"
+frameborder="0">
+</iframe>
+
+This histogram shows that danceability scores are approximately centered around 0.6. Most songs fall between 0.4 and 0.8, while very low and very high danceability scores are relatively uncommon. The distribution is roughly unimodal and concentrated in the middle range, suggesting that songs in the Spotify dataset tend to be moderately danceable. Overall, danceability does not appear to be evenly distributed across all possible values, with most observations clustered around the center of the scale. This distribution provides useful context for the analyses conducted later in the project.
 
 ## Step 3: Assessment of Missingness
 
