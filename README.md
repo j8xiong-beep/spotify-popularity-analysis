@@ -149,7 +149,7 @@ Research Question: Do songs with higher danceability tend to have higher popular
 
 <iframe
 src="assets/danceability_hypothesis_test.html"
-width="1200"
+width="750"
 height="550"
 frameborder="0">
 </iframe>
