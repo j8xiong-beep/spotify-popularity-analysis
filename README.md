@@ -64,6 +64,10 @@ In addition to exploring this relationship, I will build machine learning models
 | Tempo | Beats per minute (BPM) |
 | Valence | Musical positivity and happiness level |
 
+---
+🎵 🎶 🎵 🎶 🎵 🎶
+---
+
 ## Data Cleaning and Exploratory Data Analysis
 
 The Spotify dataset contains 114,000 songs and 22 variables.
@@ -146,6 +150,10 @@ The bar chart shows that the average popularity scores are relatively similar ac
 
 Overall, the differences between groups are fairly small, indicating that danceability alone is not a strong predictor of popularity. While moderate levels of danceability may be associated with slightly higher popularity, other audio features and external factors likely play a larger role in determining whether a song becomes successful on Spotify.
 
+---
+🎵 🎶 🎵 🎶 🎵 🎶
+---
+
 ## Assessment of Missingness
 
 NMAR Analysis
@@ -173,6 +181,9 @@ The permutation test produced a p-value approximately equal to <strong>0.000</st
 
 Overall, the results indicate that the missingness of <code>tempo</code> is not completely random. Because the missingness appears to depend on an observed variable (<code>explicit</code>), the missingness mechanism is more consistent with MAR (Missing At Random) rather than MCAR (Missing Completely At Random).
 
+---
+🎵 🎶 🎵 🎶 🎵 🎶
+---
 
 ## Hypothesis Test 1: Danceability and Popularity
 
@@ -228,6 +239,9 @@ Interpretation
 
 Unlike danceability, energy did not show a statistically significant relationship with popularity. This suggests that energy alone is not a strong predictor of song popularity on Spotify.
 
+---
+🎵 🎶 🎵 🎶 🎵 🎶
+---
 
 ## Framing Prediction Problem
 
@@ -271,6 +285,9 @@ I will evaluate model performance using Root Mean Squared Error (RMSE).
 RMSE measures the typical magnitude of prediction errors while placing a larger penalty on large mistakes. Since popularity is a continuous numerical variable ranging from 0 to 100, RMSE is an appropriate metric for assessing regression performance.
 Lower RMSE values indicate that predicted popularity scores are closer to the true popularity scores.
 
+---
+🎵 🎶 🎵 🎶 🎵 🎶
+---
 
 ## Baseline Model
 
@@ -308,6 +325,10 @@ In final model, I plan to improve the model by adding more audio features such a
 - explicit
 
 and exploring additional feature engineering techniques.
+
+---
+🎵 🎶 🎵 🎶 🎵 🎶
+---
 
 ## Final Model
 
@@ -412,6 +433,9 @@ alpha = 1
 
 as the optimal regularization parameter.
 
+
+---
+🎵 🎶 🎵 🎶 🎵 🎶
 ---
 
 ## Final Model Performance
@@ -515,6 +539,8 @@ These results suggest that the final model performs differently across explicit 
 
 This finding highlights a potential fairness concern and demonstrates the importance of evaluating model performance separately across different groups rather than relying only on overall model accuracy.
 
+---
+🎵 🎶 🎵 🎶 🎵 🎶
 ---
 
 ## Conclusion
