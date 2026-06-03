@@ -12,7 +12,9 @@ Music plays an important role in my daily life, and I am interested in understan
 
 For this project, I use the Spotify Music Tracks dataset, which contains information on more than 110,000 songs. The dataset includes popularity scores, audio features, genre labels, and other metadata. Because it contains both numerical and categorical variables, it is well suited for exploratory data analysis, hypothesis testing, missingness analysis, and predictive modeling.
 
-My primary research question is: **Do songs with higher danceability tend to receive higher popularity scores on Spotify?** Danceability measures how suitable a song is for dancing based on rhythm, beat strength, tempo, and overall musical characteristics. Since many viral songs on social media platforms are highly danceable, I want to investigate whether higher danceability is associated with greater popularity.
+My primary research question is: **Do songs with higher danceability tend to receive higher popularity scores on Spotify?** 
+
+Danceability measures how suitable a song is for dancing based on rhythm, beat strength, tempo, and overall musical characteristics. Since many viral songs on social media platforms are highly danceable, I want to investigate whether higher danceability is associated with greater popularity.
 
 In addition to exploring this relationship, I will build machine learning models to predict song popularity using a variety of audio features. I will compare a baseline model with a more advanced final model and evaluate whether the final model performs fairly across different groups of songs.
 
