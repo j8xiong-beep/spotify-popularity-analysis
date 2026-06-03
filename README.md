@@ -1,10 +1,10 @@
 <p align="center">
-🎧 🎶 🎼 🎤 🎹
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" width="120">
 </p>
 
-## Project Goal
-
-Analyze factors that influence Spotify song popularity and build a predictive model.
+<p align="center">
+🎧 🎶 🎼 🎤 🎹
+</p>
 
 <iframe style="border-radius:12px" 
 src="https://open.spotify.com/embed/track/1BxfuPKGuaTgP7aM0Bbdwr?utm_source=generator" 
@@ -15,6 +15,10 @@ allowfullscreen=""
 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
 loading="lazy">
 </iframe>
+
+## Project Goal
+
+Analyze factors that influence Spotify song popularity and build a predictive model.
 
 ## Executive Summary
 
