@@ -6,26 +6,47 @@
 
 Analyze factors that influence Spotify song popularity and build a predictive model.
 
+## Executive Summary
+
+This project analyzes more than 114,000 Spotify songs to investigate factors that influence song popularity.
+
+Key findings:
+
+- Danceability is positively associated with popularity.
+- Energy shows a moderate positive relationship with popularity.
+- Acoustic songs generally receive lower popularity scores.
+- Machine learning models can partially predict popularity using audio features.
+
 ## Introduction
 
 Music plays an important role in my daily life, and I am interested in understanding why some songs become more popular than others. In recent years, platforms such as TikTok, Instagram Reels, and Spotify have made it possible for songs to reach millions of listeners within a very short period of time. This raises an interesting question: are there measurable characteristics that make a song more likely to become popular?
 
 For this project, I use the Spotify Music Tracks dataset, which contains information on more than 110,000 songs. The dataset includes popularity scores, audio features, genre labels, and other metadata. Because it contains both numerical and categorical variables, it is well suited for exploratory data analysis, hypothesis testing, missingness analysis, and predictive modeling.
 
-My primary research question is: **Do songs with higher danceability tend to receive higher popularity scores on Spotify?** 
+## Research question: 
+
+**Do songs with higher danceability tend to receive higher popularity scores on Spotify?** 
 
 Danceability measures how suitable a song is for dancing based on rhythm, beat strength, tempo, and overall musical characteristics. Since many viral songs on social media platforms are highly danceable, I want to investigate whether higher danceability is associated with greater popularity.
 
 In addition to exploring this relationship, I will build machine learning models to predict song popularity using a variety of audio features. I will compare a baseline model with a more advanced final model and evaluate whether the final model performs fairly across different groups of songs.
 
-Relevant variables used throughout this project include:
+## Dataset Overview
 
-* **popularity:** Spotify popularity score ranging from 0 to 100, where higher values indicate greater popularity.
-* **danceability:** A score between 0 and 1 that measures how suitable a song is for dancing.
-* **energy:** A measure of the intensity and activity level of a song.
-* **tempo:** Estimated beats per minute (BPM) of a song.
-* **valence:** A measure of musical positivity, where higher values generally correspond to happier and more cheerful songs.
+- Source: Spotify Music Tracks Dataset
+- Number of Songs: 114,000+
+- Features: Audio characteristics, popularity scores, genres, and metadata
+- Data Type: Numerical and categorical variables
+  
+## Key Variables
 
+| Variable | Description |
+|----------|-------------|
+| Popularity | Spotify popularity score (0–100) |
+| Danceability | Measures how suitable a song is for dancing |
+| Energy | Intensity and activity level of a song |
+| Tempo | Beats per minute (BPM) |
+| Valence | Musical positivity and happiness level |
 
 ## Data Cleaning and Exploratory Data Analysis
 
