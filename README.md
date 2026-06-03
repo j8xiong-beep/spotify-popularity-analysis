@@ -257,15 +257,166 @@ This indicates that predictions are typically about 22 popularity points away fr
 
 ## Assessment
 
-The baseline model captures some information about popularity but its prediction error remains relatively large.
+The model provides a reasonable baseline for predicting popularity, but its error is still relatively high. This suggests that popularity depends on more factors than just danceability and energy.
 
-This suggests that popularity depends on additional song characteristics beyond danceability and energy alone.
+In final model, I plan to improve the model by adding more audio features such as:
 
-For the final model, I plan to include additional features such as loudness, valence, acousticness, speechiness, tempo, and explicit status, as well as explore feature engineering techniques.
+- loudness
+- valence
+- acousticness
+- tempo
+- speechiness
+- explicit
 
-## Step 7: Final Model
+and exploring additional feature engineering techniques.
 
-...
+## Final Model
+
+For my final model, I expanded upon the baseline model by incorporating additional audio features, categorical encodings, and engineered features.
+
+The response variable remains:
+
+- popularity
+
+
+## Features Used
+
+### Quantitative Features
+
+- danceability
+- energy
+- loudness
+- valence
+- acousticness
+- speechiness
+- instrumentalness
+- tempo
+- duration_ms
+
+### Categorical Features
+
+- track_genre
+- explicit
+
+---
+
+## Engineered Features
+
+To improve upon the baseline model, I created the following engineered features:
+
+### duration_min
+
+- Converts song duration from milliseconds to minutes.
+- Provides a more interpretable measure of song length.
+
+### dance_energy
+
+Computed as:
+
+danceability × energy
+
+This feature captures the interaction between how danceable and energetic a song is.
+
+### loud_energy
+
+Computed as:
+
+loudness × energy
+
+This feature represents overall song intensity by combining loudness and energy.
+
+These engineered features satisfy the project requirement of creating new features from the original dataset.
+
+---
+
+## Data Processing
+
+The final model uses the same train-test split strategy as the baseline model:
+
+- 75% Training Data
+- 25% Testing Data
+- random_state = 42
+
+Using the same split allows for a fair comparison between the baseline and final models.
+
+Preprocessing steps included:
+
+- Missing numerical values were imputed using the median.
+- Numerical variables were standardized using StandardScaler.
+- Categorical variables were encoded using OneHotEncoder.
+
+These preprocessing steps were implemented inside a scikit-learn Pipeline to ensure consistent transformations and avoid data leakage.
+
+---
+
+## Model Selection
+
+I selected Ridge Regression as the final model.
+
+Compared to ordinary Linear Regression, Ridge Regression applies L2 regularization, which helps reduce overfitting when many correlated predictors are included.
+
+To tune the regularization strength, I used GridSearchCV with 5-fold cross-validation.
+
+Candidate alpha values:
+
+- 0.1
+- 1
+- 10
+- 100
+- 1000
+
+### Best Hyperparameter
+
+GridSearchCV selected:
+
+alpha = 1
+
+as the optimal regularization parameter.
+
+---
+
+## Final Model Performance
+
+| Model | RMSE |
+|---------|---------|
+| Baseline Model | 22.24 |
+| Final Model | 19.14 |
+
+The final model reduced RMSE from 22.24 to 19.14.
+
+Overall improvement:
+
+RMSE Reduction = 3.10
+
+This improvement suggests that the additional audio features, engineered features, categorical encodings, and Ridge regularization provided useful information for predicting Spotify song popularity.
+
+---
+
+## Assessment
+
+The baseline model demonstrated that danceability and energy contain some predictive information about song popularity.
+
+The final model achieved better predictive performance by incorporating:
+
+- Additional audio features
+- Engineered interaction terms
+- OneHotEncoding of categorical variables
+- Feature scaling with StandardScaler
+- Ridge regularization
+- Hyperparameter tuning using GridSearchCV
+
+Although the final model improved prediction accuracy, popularity remains difficult to predict perfectly because many external factors such as artist reputation, marketing exposure, playlist placement, and cultural trends are not captured in the dataset.
+
+---
+
+## Reflection
+
+This project showed that song popularity is influenced by a combination of musical characteristics rather than any single feature.
+
+Feature engineering and regularization both contributed to improved performance. The final model achieved a meaningful reduction in prediction error while maintaining interpretability.
+
+Future work could explore more advanced machine learning models, additional feature engineering techniques, and external data sources to further improve prediction performance.
+
 
 ## Step 8: Fairness Analysis
 
