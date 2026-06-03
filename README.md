@@ -235,9 +235,35 @@ RMSE measures the typical magnitude of prediction errors while placing a larger 
 Lower RMSE values indicate that predicted popularity scores are closer to the true popularity scores.
 
 
-## Step 6: Baseline Model
+## Baseline Model
 
-...
+Response Variable:
+- popularity
+
+Features Used:
+- danceability
+- energy
+
+Both predictors are quantitative variables, so no encoding was required.
+
+These features were selected because they were explored in the hypothesis testing section and are related to song popularity.
+
+## Performance
+
+Evaluation Metric:
+- RMSE
+
+RMSE = 22.24
+
+This indicates that predictions are typically about 22 popularity points away from the true popularity values.
+
+## Assessment
+
+The baseline model captures some information about popularity but its prediction error remains relatively large.
+
+This suggests that popularity depends on additional song characteristics beyond danceability and energy alone.
+
+For the final model, I plan to include additional features such as loudness, valence, acousticness, speechiness, tempo, and explicit status, as well as explore feature engineering techniques.
 
 ## Step 7: Final Model
 
