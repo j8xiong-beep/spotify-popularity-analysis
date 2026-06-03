@@ -135,9 +135,7 @@ The permutation test produced a p-value approximately equal to <strong>0.000</st
 Overall, the results indicate that the missingness of <code>tempo</code> is not completely random. Because the missingness appears to depend on an observed variable (<code>explicit</code>), the missingness mechanism is more consistent with MAR (Missing At Random) rather than MCAR (Missing Completely At Random).
 
 
-## Hypothesis Testing
-
-Hypothesis Test 1: Danceability and Popularity
+## Hypothesis Test 1: Danceability and Popularity
 
 Research Question: Do songs with higher danceability tend to have higher popularity scores on Spotify?
 
@@ -160,7 +158,7 @@ Because the p-value is below the significance level of 0.05, I rejected the null
 
 However, the observed difference is relatively small, so danceability alone is not enough to strongly explain song popularity. This result suggests that danceability may be associated with popularity, but other audio features and external factors likely also play an important role.
 
-Hypothesis Test 2: Energy and Popularity
+## Hypothesis Test 2: Energy and Popularity
 
 Research Question: Do songs with higher energy tend to have higher popularity scores on Spotify?
 
