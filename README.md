@@ -2,10 +2,6 @@
 🎧 🎶 🎼 🎤 🎹
 </p>
 
-# What Makes a Song Popular?
-
-## Spotify Popularity Analysis
-
 Exploring 114,000+ Songs with Data Science & Machine Learning
 
 **Jingyun Xiong**  
