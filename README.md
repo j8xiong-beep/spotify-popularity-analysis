@@ -420,4 +420,84 @@ Future work could explore more advanced machine learning models, additional feat
 
 ## Step 8: Fairness Analysis
 
-...
+For my fairness analysis, I evaluated whether the final model performs equally well across different groups of songs.
+
+### Groups Compared
+
+* **Group X:** Explicit songs
+* **Group Y:** Non-explicit songs
+
+Since this is a regression problem, I used **Root Mean Squared Error (RMSE)** as the evaluation metric.
+
+### Research Question
+
+Does the final model perform worse for explicit songs than for non-explicit songs?
+
+### Null Hypothesis
+
+The model performs equally well for explicit and non-explicit songs. Any observed difference in RMSE is due to random chance.
+
+### Alternative Hypothesis
+
+The model performs differently across explicit and non-explicit songs. Specifically, the model may have higher prediction error for explicit songs.
+
+### Significance Level
+
+α = 0.05
+
+### Fairness Results
+
+| Group              | RMSE  |
+| ------------------ | ----- |
+| Non-explicit Songs | 18.84 |
+| Explicit Songs     | 22.04 |
+
+The observed test statistic was the absolute difference in RMSE between the two groups:
+
+22.04 − 18.84 = **3.20**
+
+To evaluate whether this difference could have occurred by chance, I performed a permutation test with **1000 repetitions**.
+
+The resulting p-value was **less than 0.001**.
+
+Because the p-value is below the significance level α = 0.05, I reject the null hypothesis.
+
+The observed RMSE difference lies far outside the permutation distribution shown above, indicating that such a large difference would be extremely unlikely if the model performed equally well for both groups.
+
+These results suggest that the final model performs differently across explicit and non-explicit songs. In particular, the model has a higher RMSE for explicit songs, indicating lower predictive accuracy for that subgroup.
+
+This finding highlights a potential fairness concern and demonstrates the importance of evaluating model performance separately across different groups rather than relying only on overall model accuracy.
+
+---
+
+## Conclusion
+
+This project investigated whether songs with higher danceability tend to be more popular on Spotify and whether song characteristics can be used to predict popularity.
+
+The exploratory data analysis suggested a positive relationship between danceability and popularity. The hypothesis test provided evidence that songs with higher danceability generally have higher popularity scores.
+
+A baseline Linear Regression model using danceability and energy achieved an RMSE of **22.24**.
+
+To improve performance, I developed a final Ridge Regression model that incorporated additional audio features, categorical variables, and engineered features. The final model achieved an RMSE of **19.14**, representing an improvement of approximately **3.10 RMSE points** over the baseline model.
+
+The engineered features included:
+
+* duration_min
+* dance_energy
+* loud_energy
+
+The final model also benefited from:
+
+* OneHotEncoding of categorical variables
+* Standardization of numerical variables
+* Ridge regularization
+* Hyperparameter tuning using GridSearchCV
+
+Overall, the final model achieved better predictive performance while maintaining a fair comparison with the baseline model through the use of the same train-test split.
+
+The fairness analysis revealed that model performance differed across explicit and non-explicit songs, suggesting that prediction accuracy is not evenly distributed across all groups.
+
+These results indicate that while danceability contributes to song popularity, popularity is influenced by many additional factors. The improvement achieved by the final model demonstrates the value of incorporating richer audio characteristics and feature engineering into predictive models.
+
+Future work could explore additional fairness metrics, investigate performance across other song genres and artist groups, and incorporate more advanced machine learning models such as Random Forests, Gradient Boosting, or XGBoost to further improve prediction accuracy.
+
