@@ -445,6 +445,14 @@ The model performs differently across explicit and non-explicit songs. Specifica
 
 α = 0.05
 
+<iframe
+src="assets/permutation_distribution_RMSE.html"
+width="750"
+height="550"
+frameborder="0">
+</iframe>
+
+
 ### Fairness Results
 
 | Group              | RMSE  |
