@@ -109,17 +109,13 @@ Overall, the differences between groups are fairly small, indicating that dancea
 
 ## Assessment of Missingness
 
-<h3>NMAR Analysis</h3>
+NMAR Analysis
 
-<p>
 The <code>tempo</code> column contains a substantial number of missing values. Based only on the observed data, it is difficult to determine whether the missingness mechanism is NMAR (Not Missing At Random). One possible explanation is that tempo values may be unavailable for some songs because of limitations in Spotify's audio feature extraction process. Additional information about how Spotify generates audio features would be required to determine whether the missingness is truly NMAR.
-</p>
 
-<h3>Missingness Dependency Analysis</h3>
+Missingness Dependency Analysis
 
-<p>
 To investigate whether the missingness of the <code>tempo</code> column depends on other variables in the dataset, I performed permutation tests using both <code>popularity</code> and <code>explicit</code>.
-</p>
 
 <iframe
 src="assets/tempo_missingness_popularity.html"
@@ -128,46 +124,28 @@ height="550"
 frameborder="0">
 </iframe>
 
-<p>
 The boxplot above shows the distribution of popularity for songs with missing and non-missing tempo values. The two distributions appear very similar, with nearly identical medians and spreads.
-</p>
 
-<p>
 A permutation test comparing popularity across the two groups produced a p-value of approximately <strong>0.734</strong>. Since this value is much larger than 0.05, I failed to reject the null hypothesis. This suggests that tempo missingness does not appear to depend on popularity.
-</p>
 
-<p>
 Next, I investigated whether tempo missingness depends on whether a song is marked as explicit. The observed difference in explicit rates between songs with missing and non-missing tempo values was tested using a permutation test.
-</p>
 
-<p>
 The permutation test produced a p-value approximately equal to <strong>0.000</strong>. Since this value is less than 0.05, I rejected the null hypothesis. This suggests that tempo missingness is associated with the <code>explicit</code> variable.
-</p>
 
-<p>
 Overall, the results indicate that the missingness of <code>tempo</code> is not completely random. Because the missingness appears to depend on an observed variable (<code>explicit</code>), the missingness mechanism is more consistent with MAR (Missing At Random) rather than MCAR (Missing Completely At Random).
-</p>
 
 
 ## Hypothesis Testing
 
-<h3>Hypothesis Test 1: Danceability and Popularity</h3>
+Hypothesis Test 1: Danceability and Popularity
 
-<p>
 Research Question: Do songs with higher danceability tend to have higher popularity scores on Spotify?
-</p>
 
-<p>
 <strong>Null Hypothesis:</strong> Songs with high danceability and songs with low danceability have the same average popularity.
-</p>
 
-<p>
 <strong>Alternative Hypothesis:</strong> Songs with high danceability have higher average popularity than songs with low danceability.
-</p>
 
-<p>
 <strong>Significance Level:</strong> α = 0.05
-</p>
 
 <iframe
 src="assets/danceability_hypothesis_test.html"
@@ -176,35 +154,21 @@ height="550"
 frameborder="0">
 </iframe>
 
-<p>
 The observed difference in mean popularity between songs with high danceability and songs with low danceability was approximately <strong>0.531</strong>. The permutation test produced a p-value smaller than <strong>0.001</strong>.
-</p>
 
-<p>
 Because the p-value is below the significance level of 0.05, I rejected the null hypothesis. This provides statistical evidence that songs with higher danceability tend to have slightly higher popularity scores on Spotify.
-</p>
 
-<p>
 However, the observed difference is relatively small, so danceability alone is not enough to strongly explain song popularity. This result suggests that danceability may be associated with popularity, but other audio features and external factors likely also play an important role.
-</p>
 
-<h3>Hypothesis Test 2: Energy and Popularity</h3>
+Hypothesis Test 2: Energy and Popularity
 
-<p>
 Research Question: Do songs with higher energy tend to have higher popularity scores on Spotify?
-</p>
 
-<p>
 <strong>Null Hypothesis:</strong> Songs with high energy and songs with low energy have the same average popularity.
-</p>
 
-<p>
 <strong>Alternative Hypothesis:</strong> Songs with high energy have higher average popularity than songs with low energy.
-</p>
 
-<p>
 <strong>Significance Level:</strong> α = 0.05
-</p>
 
 <iframe
 src="assets/energy_hypothesis_test.html"
@@ -213,36 +177,63 @@ height="550"
 frameborder="0">
 </iframe>
 
-<p>
 The observed difference in mean popularity between songs with high energy and low energy was approximately <strong>-1.04</strong>.
-</p>
 
-<p>
 The permutation test produced a p-value of <strong>1.0</strong>.
-</p>
 
-<p>
 Because the p-value is much larger than 0.05, I failed to reject the null hypothesis.
-</p>
 
-<p>
 The data do not provide evidence that songs with higher energy tend to have higher popularity scores on Spotify.
-</p>
 
-<p>
 Interestingly, songs with higher energy had slightly lower average popularity in this dataset. However, this difference was not statistically significant and may simply be due to random variation.
-</p>
 
-<h4>Interpretation</h4>
+Interpretation
 
-<p>
 Unlike danceability, energy did not show a statistically significant relationship with popularity. This suggests that energy alone is not a strong predictor of song popularity on Spotify.
-</p>
 
 
-## Step 5: Prediction Problem
+## Framing Prediction Problem
 
-...
+The goal of this project is to predict a song's popularity score on Spotify using audio features and song characteristics available in the dataset.
+
+The response variable is:
+
+- popularity
+
+Popularity is a numerical variable ranging from 0 to 100, representing how popular a song is on Spotify.
+
+Because the response variable is continuous, this is a **regression problem** rather than a classification problem.
+
+## Why Popularity?
+Popularity is a key measure of a song’s success on Spotify. It summarizes listener engagement and overall performance on the platform. Throughout the exploratory data analysis and hypothesis testing sections, I examined how audio characteristics such as danceability and energy relate to popularity. Predicting popularity allows me to investigate whether these audio features can be used to explain and forecast a song’s success.
+
+## Features Available at Time of Prediction
+
+At the time a song is released, Spotify audio features can already be calculated. Therefore, I will use features such as:
+
+- danceability
+- energy
+- loudness
+- speechiness
+- acousticness
+- instrumentalness
+- liveness
+- valence
+- tempo
+- duration_ms
+- explicit
+
+These variables are available when a song is released and do not depend on future popularity outcomes. Therefore, they can reasonably be used as predictors without introducing data leakage.
+
+I will not use popularity itself or any variables that directly depend on popularity.
+
+## Evaluation Metric
+
+I will evaluate model performance using Root Mean Squared Error (RMSE).
+
+RMSE measures the typical magnitude of prediction errors while placing a larger penalty on large mistakes. Since popularity is a continuous numerical variable ranging from 0 to 100, RMSE is an appropriate metric for assessing regression performance.
+Lower RMSE values indicate that predicted popularity scores are closer to the true popularity scores.
+
 
 ## Step 6: Baseline Model
 
