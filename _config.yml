@@ -2,19 +2,3 @@ remote_theme: pages-themes/midnight@v0.2.0
 
 plugins:
   - jekyll-remote-theme
-
-╔════════════════════════════╗
-
-🎧
-
-What Makes a Song Popular?
-
-Spotify Popularity Analysis
-
-Exploring 114,000+ Songs
-with Data Science & Machine Learning
-
-Jingyun Xiong
-UC San Diego
-
-╚════════════════════════════╝
