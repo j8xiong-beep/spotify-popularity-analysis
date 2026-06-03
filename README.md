@@ -6,6 +6,16 @@
 
 Analyze factors that influence Spotify song popularity and build a predictive model.
 
+<iframe style="border-radius:12px" 
+src="https://open.spotify.com/embed/track/1BxfuPKGuaTgP7aM0Bbdwr?utm_source=generator" 
+width="100%" 
+height="152" 
+frameBorder="0" 
+allowfullscreen="" 
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+loading="lazy">
+</iframe>
+
 ## Executive Summary
 
 This project analyzes more than 114,000 Spotify songs to investigate factors that influence song popularity.
