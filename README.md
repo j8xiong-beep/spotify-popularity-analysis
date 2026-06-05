@@ -317,8 +317,7 @@ I will not use popularity itself or any variables that directly depend on popula
 
 I will evaluate model performance using Root Mean Squared Error (RMSE).
 
-RMSE measures the typical magnitude of prediction errors while placing a larger penalty on large mistakes. Since popularity is a continuous numerical variable ranging from 0 to 100, RMSE is an appropriate metric for assessing regression performance.
-Lower RMSE values indicate that predicted popularity scores are closer to the true popularity scores.
+RMSE measures the typical magnitude of prediction errors while placing a larger penalty on large mistakes. Since popularity is a continuous numerical variable ranging from 0 to 100, RMSE is an appropriate metric for assessing regression performance. Lower RMSE values indicate that predicted popularity scores are closer to the true popularity scores. I chose RMSE because it penalizes large prediction errors more heavily than metrics such as Mean Absolute Error (MAE). Since popularity scores range from 0 to 100, reducing large prediction mistakes is especially important for evaluating model performance.
 
 ---
 🎵 🎶 🎵 🎶 🎵 🎶
