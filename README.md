@@ -72,6 +72,18 @@ In addition to exploring this relationship, I will build machine learning models
 
 The Spotify dataset contains 114,000 songs and 22 variables.
 
+The first five rows of the cleaned dataset are shown below.
+
+| track_name | popularity | danceability |
+|------------|------------|------------|
+| Comedy | 73 | 0.676 |
+| Ghost Acoustic | 55 | 0.420 |
+| To Begin Again | 57 | 0.438 |
+| Can't Help Falling In Love | 71 | 0.266 |
+| Hold On | 82 | 0.618 |
+
+
+
 After examining the dataset structure using `info()`, I found that most variables were complete. However, several metadata columns such as artist name, album name, and track name contained a very small number of missing values.
 
 Summary statistics for two important variables are shown below.
@@ -84,6 +96,7 @@ Summary statistics for two important variables are shown below.
 These results suggest that the average popularity score is relatively low, while danceability is centered around 0.57.
 
 I inspected the dataset structure and checked for missing values before beginning the analysis. Most variables used in this project, including popularity and danceability, contain complete observations. However, the tempo column contains a noticeable number of missing values (22,114 missing entries). Since tempo is not the primary variable used to answer my research question, I focused on variables with complete information such as popularity and danceability. No additional cleaning was required for these key variables, making the dataset suitable for further exploratory analysis and hypothesis testing.
+
 
 ## Univariate Analysis: Popularity Distribution
 To better understand the dataset, I first examined the distribution of Spotify popularity scores. The histogram below shows the distribution of song popularity across all tracks in the dataset.
@@ -136,6 +149,13 @@ frameborder="0">
 This scatter plot shows the relationship between energy and popularity for the sampled Spotify songs. The points are widely spread across different energy levels, suggesting that there is no strong visual relationship between energy and popularity. Popular songs appear at both moderate and high energy levels, while many high-energy songs still have low or moderate popularity. This suggests that energy alone is unlikely to explain song popularity.
 
 ## Interesting Aggregate: Average Popularity by Danceability Group
+
+| Danceability Group | Average Popularity |
+|-------------------|-------------------|
+| Low | 31.07 |
+| Medium-Low | 34.91 |
+| Medium-High | 35.76 |
+| High | 32.75 |
 
 To better compare popularity across different levels of danceability, I divided songs into four danceability groups (Low, Medium-Low, Medium-High, and High) and calculated the average popularity score for each group.
 
