@@ -515,7 +515,7 @@ Feature engineering and regularization both contributed to improved performance.
 Future work could explore more advanced machine learning models, additional feature engineering techniques, and external data sources to further improve prediction performance.
 
 
-## Step 8: Fairness Analysis
+## Fairness Analysis
 
 For my fairness analysis, I evaluated whether the final model performs equally well across different groups of songs.
 
