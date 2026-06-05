@@ -215,6 +215,13 @@ Research Question: Do songs with higher danceability tend to have higher popular
 
 <strong>Significance Level:</strong> α = 0.05
 
+### Test Statistic
+
+Difference in mean popularity
+(High Danceability Group − Low Danceability Group)
+
+A permutation test is appropriate because we want to compare the average popularity between two groups (high danceability and low danceability) without assuming any particular distribution. The difference in means is a natural test statistic because popularity is a quantitative variable.
+
 <iframe
 src="assets/danceability_hypothesis_test.html"
 width="750"
@@ -237,6 +244,14 @@ Research Question: Do songs with higher energy tend to have higher popularity sc
 <strong>Alternative Hypothesis:</strong> Songs with high energy have higher average popularity than songs with low energy.
 
 <strong>Significance Level:</strong> α = 0.05
+
+## Test Statistic
+
+Difference in mean popularity
+(High Energy Group − Low Energy Group)
+
+Energy is another quantitative audio feature that may be associated with popularity. Comparing the mean popularity between high- and low-energy songs allows us to evaluate
+whether energy has a meaningful relationship with popularity.
 
 <iframe
 src="assets/energy_hypothesis_test.html"
